@@ -43,3 +43,23 @@ void driver::check(bigraph *b) {
 
 	exit(0);
 }
+
+void driver::check_function(bigraph *b,results_map& results ) {
+  if(!b || !b->get_root(0)) {
+    cout << "driver::check(): NULL" << endl;
+    return;
+  }
+
+  mc *m = new mc(b);
+  m->setResults(&results);
+
+  m->check();
+
+  delete m;
+
+  query_predicate::cleanup();
+  if(global_cfg.function_mode)
+    return;
+  else
+  exit(0);
+}

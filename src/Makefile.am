@@ -11,6 +11,7 @@ libbigmc_a_SOURCES = bgparser.ypp \
 	parser.cpp \
 	report.cpp \
 	bigraph.cpp \
+	functions.cpp \
 	analyser.cpp \
 	driver.cpp \
 	graph.cpp \
@@ -42,6 +43,7 @@ libbigmc_a_SOURCES = bgparser.ypp \
 	../include/bigraph.h \
 	../include/analyser.h \
 	../include/driver.h \
+	../include/functions.h \
 	../include/graph.h \
 	../include/match.h \
 	../include/mc.h \
@@ -64,6 +66,7 @@ noinst_HEADERS = ../include/bigmc.h \
 	../include/bigraph.h \
 	../include/analyser.h \
 	../include/driver.h \
+	../include/functions.h \
 	../include/graph.h \
 	../include/match.h \
 	../include/mc.h \
@@ -86,4 +89,5 @@ bigmc_SOURCES = main.cpp
 bigmc_LDADD = libbigmc.a
 
 includes = ../include
+
 

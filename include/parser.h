@@ -48,6 +48,7 @@ public:
 	static void init(char *file);
 	static void cleanup();
 	static int  parse();
+  static int  parse_function(const std::string& model, results_map& results);
 	static void add_result(parsenode *p);
 	static bigraph *finish();
 };
@@ -60,3 +61,4 @@ int yylex();
 int yyparse();
 
 #endif
+

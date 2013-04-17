@@ -21,6 +21,8 @@
 *********************************************************************************/
 #ifndef _GLOBALS_H
 #define _GLOBALS_H
+#include <map>
+#include <string>
 
 struct global_config {
 	bool debug;
@@ -35,10 +37,12 @@ struct global_config {
 	bool print_mode;
 	bool analyse_only;
 	bool calculation;
+	bool function_mode;
 };
 
 extern global_config global_cfg; 
 typedef unsigned short control;
 typedef unsigned short name;
+typedef map<unsigned int,std::string> results_map;
 
 #endif

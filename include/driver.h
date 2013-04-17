@@ -21,10 +21,12 @@
 *********************************************************************************/
 #ifndef _DRIVER_H
 #define _DRIVER_H
-
+#include <map>
+#include <string>
 class driver {
 public:
 	static void check(bigraph *b);
+	static void check_function(bigraph *b,map<unsigned int,std::string>&results);
 };
 
 #endif

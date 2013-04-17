@@ -49,7 +49,8 @@ using namespace std;
 #include "mc.h"
 #include "driver.h"
 #include "parser.h"
-
+#include "functions.h"
 void print_version();
 
 #endif
+

@@ -21,7 +21,7 @@
 *********************************************************************************/
 #ifndef _MC_H
 #define _MC_H
-
+#include <string.h>
 class mc {
 	graph *g;
 	analyser *analyse;
@@ -29,6 +29,7 @@ class mc {
 	unsigned long steps;
 	static map<string,query *> properties;
 	map<unsigned long,bool> checked;
+  results_map* results;
 	static set<match *> match_discard;
 public:
 	mc(bigraph *b);
@@ -38,9 +39,16 @@ public:
 	bool step(int tid);
 	static void add_property(string s, query *q);
 	bool check_properties(node *n);
+
 	static void *thread_wrapper( void *i );
 	static void match_mark_delete( match *m );
 	static void match_gc();
+
+  void
+  setResults(results_map* results)
+  {
+    this->results = results;
+  }
 };
 
 #endif
